@@ -53,8 +53,9 @@ python Run.py
 ```
 # Features Planned
 * A parser to extract information from messages (Prices, Dates, Messages, Names).
-* restful implimentation in Django
+* restful implimentation in Django.
 * ReactJs front-end with build in WebViews.
+* Stand alone editor to prepare scripts and customize the bot.
 * And lots more...
 
 # Feedback / FAQs / Contact
