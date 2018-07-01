@@ -51,6 +51,11 @@ Execute Run.py
 ```shell
 python Run.py
 ```
+# Features Planned
+* A parser to extract information from messages (Prices, Dates, Messages, Names).
+* restful implimentation in Django
+* ReactJs front-end with build in WebViews.
+* And lots more...
 
 # Feedback / FAQs / Contact
 Drop me a message anywhere on the links down below 😄
