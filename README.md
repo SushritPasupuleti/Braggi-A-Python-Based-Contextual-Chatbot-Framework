@@ -38,7 +38,7 @@
 # Braggi: A Python Based Contextual Chatbot Framework
 Braggi is a Python based Contextual Chatbot Framework, which hopes to integrate all the necessities for a great chatbot framework, to satisfy both enterprise and general audiences alike. Development still underway, more features on the way 😄
 
-[logo]: https://drive.google.com/open?id=1mgm60r_VeSCULAkvhp-9JCknTu4wZWFv
+[logo]: https://3.bp.blogspot.com/-WUbgVavaK0A/WzpbbZY-NGI/AAAAAAAAXbA/_usSpB9CtdYQUAO396wVZZ12U15YBN_1ACLcBGAs/s1600/Cover1.png
 
 > Check the Development Branch for Features under development.
 
