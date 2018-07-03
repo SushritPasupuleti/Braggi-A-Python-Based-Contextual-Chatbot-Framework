@@ -1,12 +1,52 @@
 {
-    "Message": null,
-    "NamePerson": null,
-    "NameFull": null,
-    "NameFirst": null,
-    "NameLast": null,
-    "NamePlace": null,
-    "NameProduct": null,
-    "NameCompany": null,
-    "NameFlora": null,
-    "NameFauna": null    
+    "Message": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NamePerson": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameFull": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameFirst": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameLast": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NamePlace": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameProduct": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameCompany": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameFlora": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "NameFauna": {
+        "value": null,
+        "username": null,
+        "readonly": false
+    }
 }
