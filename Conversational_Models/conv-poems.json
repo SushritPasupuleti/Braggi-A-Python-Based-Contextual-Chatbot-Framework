@@ -1,0 +1,19 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Hey there", "Hello", "Good day"],
+     "responses": ["Hello, I am the bot", "Good to see you again", "Hi there, how can I help?"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Bye!"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful"],
+     "responses": ["Glad I could help! :)", "Sure, Any time!", "The pleasure's all mine :)"]
+    },
+    {"tag": "tellpoem",
+     "patterns": ["Yell me something cool", "I'm bored", "Say something" ],
+     "responses": ["Roses are red. Violets are blue, Bring me an A or no more Tofu.", "Roses are red. Violets are blue, your phone is smart, why not you ?"]
+    }
+]
+}

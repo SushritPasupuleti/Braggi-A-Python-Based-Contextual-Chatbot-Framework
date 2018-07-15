@@ -1,0 +1,33 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Hey there", "Hello", "Good day"],
+     "responses": ["Hello, I am the bot", "Good to see you again", "Hi there, how can I help?"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Bye!"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful"],
+     "responses": ["Glad I could help! :)", "Sure, Any time!", "The pleasure's all mine :)"]
+    },
+    {"tag": "who are you",
+     "patterns": ["Who are you ?", "What are you ?", "Are you human ?" ],
+     "responses": ["I'm the bot, glad to make your acquaintance :)", "I'm a chatbot, pretty self aware don't you think ? ;)"]
+    },
+    {"tag": "likes",
+     "patterns": ["What do you like ?", "What are your likes ?", "What kind of things do you like ?" ],
+     "responses": ["Conversations :)", "Short and quick conversations, as I'm trained on a small dataset :P"]
+    },
+    {"tag": "book_cab",
+     "patterns": ["book me a cab", "find me a cab"],
+     "responses": ["Sure thing", "Aye Aye captain :D"],
+     "context_state.set": "cab_booking"
+    },
+    {"tag": "book_cab.cancel",
+     "patterns": ["Cancel", "I don't need the cab"],
+     "responses": ["Your cab shall be canceled", "Cancelling"],
+     "context_state.filter": "cab_booking"
+    }
+]
+}

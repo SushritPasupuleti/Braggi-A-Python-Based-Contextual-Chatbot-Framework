@@ -1,0 +1,33 @@
+{
+    "Age" : {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "LuckyNumber" : {
+        "value": null,
+        "username": null,
+        "readonly": false
+    },
+    "Price" : {
+        "value": null,
+        "username": null,
+        "producttype": null,
+        "productname": null,
+        "readonly": false
+    },
+    "PriceRange" : {
+        "value": null,
+        "username": null,
+        "producttype": null,
+        "productname": null,
+        "readonly": false
+    },
+    "Quantity" : {
+        "value": null,
+        "username": null,
+        "producttype": null,
+        "productname": null,
+        "readonly": false
+    }
+}

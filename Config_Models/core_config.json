@@ -1,0 +1,4 @@
+{
+    "Botname": "Braggi",
+    "Conversational Models Loaded": ["conv-facts.json", "conv-poems.json"]
+}

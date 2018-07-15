@@ -1,0 +1,19 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Hey there", "Hello", "Good day"],
+     "responses": ["Hello, I am the bot", "Good to see you again", "Hi there, how can I help?"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Bye!"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful"],
+     "responses": ["Glad I could help! :)", "Sure, Any time!", "The pleasure's all mine :)"]
+    },
+    {"tag": "tellfact",
+     "patterns": ["Yell me something cool", "I'm bored", "Say something" ],
+     "responses": ["Did you know ? You can jump of a plane without a parachute, but only once :P", "Banging your head against a wall burns 150 calories an hour."]
+    }
+]
+}

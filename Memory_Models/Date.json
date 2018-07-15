@@ -1,0 +1,22 @@
+{
+    "Now": {
+        "value": null,
+        "username": null
+    },
+    "Year": {
+        "value": null,
+        "username": null
+    },
+    "Month": {
+        "value": null,
+        "username": null
+    },
+    "Day": {
+        "value": null,
+        "username": null
+    },
+    "DayofWeek": {
+        "value": null,
+        "username": null
+    }
+}

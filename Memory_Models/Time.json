@@ -1,0 +1,22 @@
+{
+    "Now": {
+        "value": null,
+        "username": null
+    },
+    "Hours": {
+        "value": null,
+        "username": null
+    },
+    "Minutes": {
+        "value": null,
+        "username": null
+    },
+    "Seconds": {
+        "value": null,
+        "username": null
+    },
+    "TimeofDay": {
+        "value": null,
+        "username": null
+    }
+}
