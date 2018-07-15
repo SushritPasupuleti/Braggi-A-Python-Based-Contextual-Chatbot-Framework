@@ -64,6 +64,7 @@ Install the following modules if you don't have them already
 pip install tensorflow
 pip install tflearn
 pip install nltk
+pip install django-rest-framework
 ```
 
 # Running the Code
