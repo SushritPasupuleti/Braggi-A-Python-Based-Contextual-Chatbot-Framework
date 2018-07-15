@@ -65,6 +65,7 @@ pip install tensorflow
 pip install tflearn
 pip install nltk
 pip install django-rest-framework
+pip install httpie
 ```
 
 # Running the Code
@@ -72,6 +73,15 @@ Execute Run.py
 ```shell
 python Run.py
 ```
+
+For Django Rest Framework based Implimentation
+```shell
+cd \braggi_rest_api
+python manage.py runserver
+http http://127.0.0.1:8000/braggi/
+```
+
+> Open http://127.0.0.1:8000/braggi/ to view the data.
 
 # Feedback / FAQs / Contact
 Drop me a message anywhere on the links down below 😄
