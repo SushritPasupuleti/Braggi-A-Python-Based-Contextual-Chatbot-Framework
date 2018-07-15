@@ -50,12 +50,12 @@ Braggi is a Python based Contextual Chatbot Framework, which hopes to integrate 
 * A fully scalable model, capable of handling larger models.
 
 # Features Planned
-* A parser to extract information from messages (Prices, Dates, Messages, Names).
-* restful implimentation in Django.
-* ReactJs front-end with build in WebViews.
-* Stand alone editor to prepare scripts and customize the bot.
-* GAN based replies 🤔?
-* And lots more...
+[ ] A parser to extract information from messages (Prices, Dates, Messages, Names).
+[x] restful implimentation in Django.
+[ ] ReactJs front-end with build in WebViews.
+[ ] Stand alone editor to prepare scripts and customize the bot.
+[ ] GAN based replies 🤔?
+[ ] And lots more...
 
 # Setup
 Install the following modules if you don't have them already
