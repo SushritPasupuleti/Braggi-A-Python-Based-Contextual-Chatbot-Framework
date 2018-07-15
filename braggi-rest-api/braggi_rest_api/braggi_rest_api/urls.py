@@ -15,14 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from rest_framework import routers
 
 from rest_api import views
 
-router = routers.DefaultRouter()
-
 urlpatterns = [
-    url(r'^braggi/$', views.conversation_list),
-    url(r'^braggi/(?P<pk>[0-9]+)$', views.conversation_detail),
-    url('admin/', admin.site.urls),
+    url(r'^', include('rest_api.urls')),
 ]

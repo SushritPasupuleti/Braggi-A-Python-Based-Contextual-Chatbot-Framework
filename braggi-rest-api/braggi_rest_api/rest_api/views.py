@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_api.models import Conversation
 from rest_api.serializers import Conv_Serializer
+from rest_api import linker
 import json
 
 @api_view(['GET', 'POST'])
@@ -17,7 +18,9 @@ def conversation_list(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = Conv_Serializer(data=request.data)
+        req_data = linker.parse_input(request.data)
+
+        serializer = Conv_Serializer(data=req_data)
         if serializer.is_valid():
             serializer.save()
 
