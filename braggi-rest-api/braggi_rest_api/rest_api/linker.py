@@ -12,4 +12,5 @@ def parse_input(raw_input):
 
     processed_out['braggi_out'] = (Run.Run_Model(braggi_in))
 
+    print(processed_out)
     return processed_out

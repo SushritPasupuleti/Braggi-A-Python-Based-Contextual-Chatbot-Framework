@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.post("http://127.0.0.1:8000/braggi/",
+        {
+          id:"",
+          username: "Batman",
+          user_in: "Hi there!!",
+          braggi_out: "See you later",
+          intent:"greetings",
+          invoked_event:"greetings"
+        },
+        function(data,status){
+            alert("Status: " + status);
+            console.log(data);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>POST data</button>
+
+</body>
+</html>
