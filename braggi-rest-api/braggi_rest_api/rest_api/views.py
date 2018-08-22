@@ -18,7 +18,7 @@ def conversation_list(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        req_data = linker.parse_input(request.data)
+        req_data = linker.parse_input(request.data) #Pass on data from POST to Braggi Engine
 
         serializer = Conv_Serializer(data=req_data)
         if serializer.is_valid():
