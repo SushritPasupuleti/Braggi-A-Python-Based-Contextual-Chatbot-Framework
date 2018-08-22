@@ -53,19 +53,28 @@ Braggi is a Python based Contextual Chatbot Framework, which hopes to integrate 
 # Features Planned
 - [ ] A parser to extract information from messages (Prices, Dates, Messages, Names).
 - [x] restful implimentation in Django.
-- [ ] ReactJs front-end with built in WebViews.
+- [x] ReactJS front-end with built in WebViews.
 - [ ] Stand alone editor to prepare scripts and customize the bot.
 - [ ] GAN based replies 🤔?
 - [ ] And lots more...
 
 # Setup
 Install the following modules if you don't have them already
+#### Python(3.6)
 ```shell
 pip install tensorflow
 pip install tflearn
 pip install nltk
 pip install django-rest-framework
 pip install httpie
+```
+#### node.js
+[Download node.js](https://nodejs.org/en/download/)
+```shell
+npm install react
+npm install express
+npm install axios
+npm install bootstrap
 ```
 
 # Running the Code
@@ -76,12 +85,22 @@ python Run.py
 
 For Django Rest Framework based Implimentation
 ```shell
-cd \braggi_rest_api
+cd \braggi-rest-api\braggi_rest_api
 python manage.py runserver
 http http://127.0.0.1:8000/braggi/
 ```
 
+For the Frontend
+```shell
+cd \braggi-reactjs-frontend
+npm start
+
+cd \backend
+node app.js
+```
+
 > Open http://127.0.0.1:8000/braggi/ to view the data.
+> Open http://127.0.0.1:3000 to view the chat UI
 
 # Feedback / FAQs / Contact
 Drop me a message anywhere on the links down below 😄
