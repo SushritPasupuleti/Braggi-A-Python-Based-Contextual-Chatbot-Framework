@@ -35,7 +35,7 @@ def model_load():
 def model_save(model, words, intent_classes, train_x, train_y):
     '''Save our trained model to a 'pickle'(.pkl) file.'''
     model.save('./rest_api/Braggi_Engine/model.tflearn')
-    pickle.dump( {'words':words, 'classes':intent_classes, 'train_x':train_x, 'train_y':train_y}, open( "training_data", "wb" ) )
+    pickle.dump( {'words':words, 'classes':intent_classes, 'train_x':train_x, 'train_y':train_y}, open( "./rest_api/Braggi_Engine/training_data", "wb" ) )
 
 def classify(model,sentence, words, intent_classes):
     ERRORR_THRESHOLD = 0.25

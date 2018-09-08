@@ -20,4 +20,5 @@ from rest_api import views
 
 urlpatterns = [
     url(r'^', include('rest_api.urls')),
-]
+    url(r'^api-admin/', include('dashboard.urls'))
+    ]

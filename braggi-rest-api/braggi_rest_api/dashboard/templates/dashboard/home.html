@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block head %}
+        <title>Braggi Admin Dashboard</title>
+        {% endblock %}
+
+        
+    </head>
+
+    <body>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tools-tab" data-toggle="tab" href="#tools" role="tab" aria-controls="tools" aria-selected="false">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="help-tab" data-toggle="tab" href="#help" role="tab" aria-controls="help" aria-selected="false">Help</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="jumbotron m-2">
+                    <h1 class="display-4">Hello, there!</h1>
+                    <p class="lead">This is Braggi's Admin Dashboard</p>
+                    <hr class="my-4">
+                    <p>Here, you can make carry out some simple tasks without restarting the server.</p>
+                    <a class="btn btn-primary btn-lg" href="#help" role="button">Learn more</a>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="tools-tab">
+                <div class="card m-2">
+                    <h5 class="card-header">Machine Learning Model Options</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Retrain Model</h5>
+                      <p class="card-text">You can retrain the Model using this.</p>
+                      <a target="_blank" href="retrain-model/" class="btn btn-primary">Retrain</a>
+                    </div>
+                  </div>
+                  <div class="card m-2">
+                    <h5 class="card-header">Chat Options</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">View Conversations</h5>
+                      <p class="card-text">Load and View all conversations carried out through Braggi's API</p>
+                      <a target="_blank" href="see-chats/" class="btn btn-primary">View Chats</a>
+                      <hr/>
+                      <h5 class="card-title">Download Conversations</h5>
+                      <p class="card-text">Download all conversations carried out through Braggi's API</p>
+                      <a id="downloadbtn" href="#" class="btn btn-primary" >Download Chats</a>
+                      <script>
+                            var dataStore;
+                            $("#downloadbtn").click(function () {
+                                $.getJSON("http://127.0.0.1:8000/braggi/", function (data, status) {
+                                    console.log(data);
+                                                    
+                                    var csv = JSON2CSV(data);
+                                    var downloadLink = document.createElement("a");
+                                    var blob = new Blob(["\ufeff", csv]);
+                                    var url = URL.createObjectURL(blob);
+                                    downloadLink.href = url;
+                                    downloadLink.download = "data.csv";
+                
+                                    document.body.appendChild(downloadLink);
+                                    downloadLink.click();
+                                    document.body.removeChild(downloadLink);
+                                    console.log(downloadLink);
+                                    });
+                            });
+
+                            function JSON2CSV(objArray) {
+                                var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+                                var str = '';
+                                var line = '';
+                            
+                                if ($("#labels").is(':checked')) {
+                                    var head = array[0];
+                                    if ($("#quote").is(':checked')) {
+                                        for (var index in array[0]) {
+                                            var value = index + "";
+                                            line += '"' + value.replace(/"/g, '""') + '",';
+                                        }
+                                    } else {
+                                        for (var index in array[0]) {
+                                            line += index + ',';
+                                        }
+                                    }
+                            
+                                    line = line.slice(0, -1);
+                                    str += line + '\r\n';
+                                }
+                            
+                                for (var i = 0; i < array.length; i++) {
+                                    var line = '';
+                            
+                                    if ($("#quote").is(':checked')) {
+                                        for (var index in array[i]) {
+                                            var value = array[i][index] + "";
+                                            line += '"' + value.replace(/"/g, '""') + '",';
+                                        }
+                                    } else {
+                                        for (var index in array[i]) {
+                                            line += array[i][index] + ',';
+                                        }
+                                    }
+                            
+                                    line = line.slice(0, -1);
+                                    str += line + '\r\n';
+                                }
+                                return str;
+                            }
+                        </script>
+                    </div>
+                  </div>
+            </div>
+            <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">
+                <div class="jumbotron m-2">
+                    <h1 class="display-4">Having difficulties ?</h1>
+                    <p class="lead">This is Braggi's Wiki for Developers</p>
+                    <hr class="my-4">
+                    <p>Here, you can find all information about the various tasks you can perfom using Braggi's Admin Dashboard</p>
+                    <a class="btn btn-primary btn-lg" href="#help" role="button">Get Started</a>
+                </div>
+            </div>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("http://127.0.0.1:8000/braggi/", function (data, status) {
+                console.log(data);
+                $('#table').bootstrapTable({
+                    data: data
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="jumbotron m-2">
+        <h1 class="display-4">Braggi API Conversation List</h1>
+        <hr class="my-4" />
+        <div class="container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th data-field="id">id</th>
+                        <th data-field="username">username</th>
+                        <th data-field="user_in">user_in</th>
+                        <th data-field="braggi_out">braggi_out</th>
+                        <th data-field="intent">intent</th>
+                        <th data-field="invoked_event">invoked_event</th>
+                    </tr>
+                </thead>
+            </table>
+            <hr/>
+        </div> <a class="btn btn-primary btn-lg" href="javascript:window.open('','_self').close();" role="button">Go Back</a>
+    </div>
+</body>
+
+</html>

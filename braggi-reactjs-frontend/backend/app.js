@@ -26,6 +26,9 @@ postMessage = (message, author) => {
     data = {author : "Braggi", message : response.data.braggi_out}
     io.emit('RECEIVE_MESSAGE', data);
   })
+  .catch(function(err){
+      console.log(err);
+  })
 }
 
 io.on('connection', (socket) => {

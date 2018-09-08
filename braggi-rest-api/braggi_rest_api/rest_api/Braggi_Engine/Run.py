@@ -11,8 +11,10 @@ def Run_Model(user_in, Trained=True):
         model = Classifier.model(train_x, train_y)
         model = Classifier.model_train(model, train_x, train_y)
         Classifier.model_save(model, words, intent_classes, train_x, train_y)
-        response = Classifier.response(model, intents, words, intent_classes, user_in)
-        return response[0]
+
+        if user_in != 'admin-override-input=null':
+            response = Classifier.response(model, intents, words, intent_classes, user_in)
+            return response[0]
 
     else:
         intents = Text_Processing_Engine.intents_loader()
