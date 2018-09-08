@@ -54,6 +54,7 @@ Braggi is a Python based Contextual Chatbot Framework, which hopes to integrate 
 - [ ] A parser to extract information from messages (Prices, Dates, Messages, Names).
 - [x] restful implimentation in Django.
 - [x] ReactJS front-end with built in WebViews.
+- [x] Admin dashboard for analytics.
 - [ ] Stand alone editor to prepare scripts and customize the bot.
 - [ ] GAN based replies 🤔?
 - [ ] And lots more...
@@ -101,6 +102,17 @@ node app.js
 
 > Open http://127.0.0.1:8000/braggi/ to view the data.
 > Open http://127.0.0.1:3000 to view the chat UI
+> Open http://127.0.0.1:8000/api-admin/login to login and head into the dashboard for all the Admin glory.
+
+To create a superuser account, follow:
+```shell
+python manage.py create superuser
+Username: Braggi-Admin
+Email address:
+Password:
+Password (again):
+Superuser created successfully.
+```
 
 # Feedback / FAQs / Contact
 Drop me a message anywhere on the links down below 😄
